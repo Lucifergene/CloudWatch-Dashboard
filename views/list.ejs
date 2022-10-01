@@ -1,0 +1,33 @@
+<div class="container">
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Alarm Name</th>
+                <th scope="col">Alarm Description</th>
+                <th scope="col">Alarm Metric</th>
+                <th scope="col">Alarm State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% MetricAlarms.forEach((MetricAlarm)=> { %>
+                <tr>
+                    <td>
+                        <%= MetricAlarm.AlarmName %>
+                    </td>
+                    <td>
+                        <%= MetricAlarm.AlarmDescription %>
+                    </td>
+                    <td>
+                        <%= MetricAlarm.MetricName %>
+                    </td>
+                    <td>
+                        <%= MetricAlarm.StateValue %>
+                    </td>
+
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>
